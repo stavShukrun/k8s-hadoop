@@ -1,8 +1,9 @@
-# K8s(minikube) and Hadoop
+# K8s(minikube) and Hadoop HDFS(Hadoop Distributed File System)
+Hadoop is a collection of open-source software utilities that facilitates using a network of many computers to solve problems involving massive amounts of data and computation. It provides a software framework for distributed storage and processing of big data using the MapReduce programming model.
 
 ## Setup
-Copy the project and set up kubernetes invairment.
-Download minikube https://minikube.sigs.k8s.io/docs/start/
+Copy the project and set up kubernetes.
+[Download minikube](https://minikube.sigs.k8s.io/docs/start/)
 When starting minikube we should increase its memory limit since our Hadoop node's pods need at least 2GB: ```minikube --memory 4096 --cpus 2 start ```(minikube's default is 1GB). NOTE: actually the Hadoop cluster by default uses about 10GB in memory limits and about 3GB running memory. From what I looked my k8s will overprovision to 300% of its capacity limits but use far less.
 
 ## Work tree
